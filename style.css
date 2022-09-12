@@ -10,6 +10,7 @@ header {
 
 .head {
     color:black;
+    padding: 4px;
 }
 
 .head:hover {
@@ -20,7 +21,7 @@ header {
 #logo {
     width: 103px;
     height: 23px;
-    text-align: left;
+    float: left;
 }
 
 h1 {
