@@ -3,9 +3,10 @@ html {
 }
 
 header {
-    padding: 20px;
+    padding: 30px;
     font-family: 'Roboto Mono', monospace;
-    text-align: right;
+    border-radius: 10px;
+    user-select: none;
 }
 
 .head {
@@ -19,9 +20,22 @@ header {
 }
 
 #logo {
-    width: 103px;
-    height: 23px;
-    float: left;
+    font-family: 'Nabla', cursive;
+    text-align: left;
+    font-size:32px;
+    cursor: pointer;
+    user-select: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li {
+    display: inline;
+    float: right;
 }
 
 h1 {
