@@ -169,3 +169,8 @@ remove border to the button */
     padding: 0 40px;
   }
 }
+
+#contact {
+    color:#9FC490;
+    font-family: 'Roboto Mono', monospace;
+}
