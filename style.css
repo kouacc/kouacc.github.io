@@ -1,82 +1,117 @@
-html {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+body {
+    background-color: #465362;
+    margin: 0px;
+    padding:0px;
+}
+/* align button to the right
+add margin to the top and bottom
+add a slight padding to the left and right
+make button transparent
+add color to the icon
+remove border to the button */
+#button {
+    float: right;
+    margin: 10px 10px 10px 0px;
+    padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
 }
 
-header {
-    padding: 30px;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 10px;
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    display: none;
+    transition: all 0.25s;
+}
+
+.menu-item {
+    color:white;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: "Roboto Mono", monospace;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
     user-select: none;
 }
 
-.head {
-    color:black;
-    padding: 4px;
+.closebutton {
+    color:white;
+    font-size: clamp(1rem, 4vw, 4rem);
+    font-family: "Roboto Mono", monospace;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
+    user-select: none;
 }
 
-.head:hover {
-    color: grey;
-    transition:.75s;
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
 }
 
+#menu-items:hover > .menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+    opacity: 1;
+}
+
+#menu-background-pattern {
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(
+        rgba(255,255,255,0.1) 9%,
+        transparent 9%
+    );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index: 1;
+
+    transition: opacity 800ms ease,
+                background-size 800ms ease; 
+}
+
+#menu:hover ~ #menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+    background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+    background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 0% -100%;
+}
+
+/* add margin and padding to the item
+*/
 #logo {
     font-family: 'Nabla', cursive;
     text-align: left;
     font-size:32px;
     cursor: pointer;
     user-select: none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-li {
-    display: inline;
-    float: right;
-}
-
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    text-align: center;
-}
-
-#mailbutton {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 12px;
-    transition: 0.75s
-}
-
-#mailbutton:hover {
-    background-color: #3e8e41;
-    transition: 0.75s
-}
-
-#discordbutton {
-    background-color: #5662f6;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 12px;
-    transition: 0.75s
-}
-
-#discordbutton:hover {
-    background-color: #3b43a9;
-    transition: 0.75s
+    margin: 10px 10px 10px 30px;
+    padding: 5px 10px 5px 10px;
+    
 }
