@@ -42,18 +42,23 @@ function spacingOut() {
 
 //open menu
 //change background color to #141414
+//add transition to the background color change and the menu opening
 function menuopen() {
     document.getElementById("menu").style.display = "block";
     document.getElementById("button").style.display = "none";
     document.getElementById("content").style.display = "none";
     document.body.style.backgroundColor = "#141414";
+    document.body.style.transition = "all 0.5s ease-in-out";
+    document.getElementById("menu").style.transition = "all 0.5s ease-in-out";
   }
    
 //close menu
 //change background color #465362
+//add transition to the background color change and the menu opening
   function menuclose() {
     document.getElementById("menu").style.display = "none";
     document.getElementById("button").style.display = "block";
     document.getElementById("content").style.display = "block";
     document.body.style.backgroundColor = "#465362";
+    document.getElementById("menu").style.transition = "all 0.5s ease-in-out";
   }

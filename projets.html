@@ -8,17 +8,30 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bungee+Spice&family=Nabla&family=Poppins:ital,wght@1,900&family=Press+Start+2P&family=Prompt:ital,wght@1,700&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <header>
-      <img src="placeholder.png" alt="placeholder" id="logo"></img>
-      <a class="head" href="index.html">Accueil</a>
-      <a class="head" href="projets.html">Projets</a>
-      <a class="head" href="contact.html">Contact</a>
-    </header>
-    <h1>Projets</h1>
-	<script src="index.js"></script>
+    <button id="button" onclick="menuopen()">
+      <span class="material-symbols-outlined">
+        home
+        </span>
+    </button>
+    <div id="menu">
+      <div id="menu-items">
+        <a href="index.html" class="menu-item">Accueil</a>
+        <a href="projets.html" class="menu-item">Projets</a>
+        <a href="contact.html" class="menu-item">Contact</a>
+        <button class="menu-item" onclick="menuclose()">X</button>
+      </div>
+      <div id="menu-background-pattern">
+      </div>
+    </div>
+    <div id="content">
+      <div id="logo">
+        <a class="head" onclick="randomFont()" onmouseover="spacing()" onmouseout="spacingOut()">kouacc</a>
+      </div>
+    </div>
   </body>
-</html>

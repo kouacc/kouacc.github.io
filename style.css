@@ -2,6 +2,7 @@ body {
     background-color: #465362;
     margin: 0px;
     padding:0px;
+    overflow: hidden;
 }
 /* align button to the right
 add margin to the top and bottom
@@ -11,10 +12,10 @@ add color to the icon
 remove border to the button */
 #button {
     float: right;
-    margin: 10px 10px 10px 0px;
+    margin: 15px 30px 10px 0px;
     padding: 5px 10px 5px 10px;
     background-color: transparent;
-    color: #fff;
+    color: #82A3A1;
     border: none;
     cursor: pointer; 
 }
@@ -36,17 +37,12 @@ remove border to the button */
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     transition: opacity 400ms ease;
     user-select: none;
+    background-color: transparent;
+    border: none;
 }
 
-.closebutton {
-    color:white;
-    font-size: clamp(1rem, 4vw, 4rem);
-    font-family: "Roboto Mono", monospace;
-    display: block;
-    text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-    transition: opacity 400ms ease;
-    user-select: none;
+.menu-item > button {
+    cursor: pointer;
 }
 
 #menu-items {
@@ -111,7 +107,65 @@ remove border to the button */
     font-size:32px;
     cursor: pointer;
     user-select: none;
-    margin: 10px 10px 10px 30px;
+    margin: 15px 10px 10px 30px;
     padding: 5px 10px 5px 10px;
     
+}
+
+.contact_buttons {
+  align-items: center;
+  background-color: #82A3A1;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.contact_buttons:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.contact_buttons:hover:after {
+  transform: translate(0, 0);
+}
+
+.contact_buttons:active {
+  background-color: #9FC490;
+  outline: 0;
+}
+
+.contact_buttons:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+.contact_buttons {
+    padding: 0 40px;
+  }
 }
