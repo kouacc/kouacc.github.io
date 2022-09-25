@@ -39,3 +39,21 @@ function spacingOut() {
     document.getElementById("logo").style.letterSpacing = "0rem";
     document.getElementById("logo").style.transition = "all 0.5s ease-in-out";
 }
+
+//open menu
+//change background color to #141414
+function menuopen() {
+    document.getElementById("menu").style.display = "block";
+    document.getElementById("button").style.display = "none";
+    document.getElementById("content").style.display = "none";
+    document.body.style.backgroundColor = "#141414";
+  }
+   
+//close menu
+//change background color #465362
+  function menuclose() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("button").style.display = "block";
+    document.getElementById("content").style.display = "block";
+    document.body.style.backgroundColor = "#465362";
+  }
