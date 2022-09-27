@@ -62,3 +62,17 @@ function menuopen() {
     document.body.style.backgroundColor = "#465362";
     document.getElementById("menu").style.transition = "all 0.5s ease-in-out";
   }
+
+//get class contact_buttons
+// when mouse is over, change background color of the body to #21272f
+// when mouse is out, change background color of the body to default
+// add transition to the background color change
+function bg_button_on() {
+    document.body.style.backgroundColor = "#21272f";
+    document.body.style.transition = "all 0.5s ease-in-out";
+}
+
+function bg_button_off() {
+  document.body.style.backgroundColor = "#465362";
+  document.body.style.transition = "all 0.5s ease-in-out";
+}
