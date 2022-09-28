@@ -76,3 +76,26 @@ function bg_button_off() {
   document.body.style.backgroundColor = "#465362";
   document.body.style.transition = "all 0.5s ease-in-out";
 }
+
+//create function explora()
+//when clicked, show the div "explora" and add a black background with opacity 0.5
+//add transition to the divs
+//reduce opacity of the background color inside the div "explora"
+//do not reduce opacity of the text inside the div "explora"
+
+function explora() {
+    document.getElementById("explora").style.display = "block";
+    document.getElementById("explora").style.transition = "all 0.5s ease-in-out";
+    document.getElementById("explora").style.backgroundColor = "#011936";
+    document.getElementById("explora").style.transition = "all 0.5s ease-in-out";
+}
+
+//create function explora_close()
+//when clicked, hide the div "explora" and remove the black background with opacity 0.5
+//add transition to the divs
+function exploraClose() {
+    document.getElementById("explora").style.display = "none";
+    document.getElementById("explora").style.transition = "all 0.5s ease-in-out";
+    document.getElementById("explora").style.backgroundColor = "rgba(0,0,0,0)";
+    document.getElementById("explora").style.transition = "all 0.5s ease-in-out";
+}
